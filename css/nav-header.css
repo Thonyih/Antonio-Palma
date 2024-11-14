@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 2px;
+}
+html,
+body {
+}
+
+/* Header */
+.main-header {
+  background-color: #212a38;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-name {
+  display: flex;
+  justify-content: left;
+  padding-left: 2%;
+  list-style-type: none;
+}
+
+.nav-detail {
+  display: flex;
+  justify-content: right;
+  padding-right: 2%;
+  padding-left: 2%;
+  gap: 2%;
+  list-style-type: none;
+}
+
+.nav-detail a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.1s ease;
+  padding: 0; /* No additional padding to avoid layout changes */
+}
+
+.nav-detail a:hover {
+  color: #0086ff; /* Change to a highlight color of your choice */
+  transition: color 0.3s ease;
+}
+
+.nav-detail a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0086ff; /* Match the hover color */
+  transition: width 0.3s ease;
+}
+
+.nav-detail a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    max-width: 100%;
+    max-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  * {
+    letter-spacing: 0px;
+  }
+
+  .main-header {
+    background-color: #212a38;
+    padding: 0.5rem;
+    width: 100;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-name {
+    padding-left: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .nav-detail {
+    padding-right: 0;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+  }
+}

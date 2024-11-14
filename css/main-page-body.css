@@ -1,0 +1,120 @@
+/* Main Content Layout */
+.waves {
+  animation: slideAnimation 10s infinite linear;
+  background-repeat: repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Keyframes for Infinite Sliding Animation */
+@keyframes slideAnimation {
+  0% {
+    background-image: url("../assets/background/wave-1.svg");
+  }
+  16.67% {
+    background-image: url("../assets/background/wave-2.svg");
+  }
+  33.33% {
+    background-image: url("../assets/background/wave-3.svg");
+  }
+  50% {
+    background-image: url("../assets/background/wave-4.svg");
+  }
+  66.67% {
+    background-image: url("../assets/background/wave-5.svg");
+  }
+  83.33% {
+    background-image: url("../assets/background/wave-6.svg");
+  }
+  100% {
+    background-image: url("../assets/background/wave-1.svg");
+  }
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2%;
+  font-size: 20px;
+}
+
+/* Left, Center, and Right Sections */
+.left-section,
+.center-section,
+.right-section {
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Override for .center-section */
+.center-section {
+  box-shadow: none;
+}
+
+.right-section:hover,
+.left-section:hover {
+  transform: scale(1.05);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* Center Section (Image) */
+.center-section {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  max-width: 300px; /* Desired display size */
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
+  image-rendering: auto; /* Ensures proper scaling */
+  margin-left: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 0px;
+  }
+
+  .left-section,
+  .right-section {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .center-section {
+    margin: 1rem 0;
+  }
+
+  .profile-image {
+    max-width: 200px;
+  }
+}
+
+.linkedin-icon {
+  width: 100px;
+  height: 100px;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 1);
+}
