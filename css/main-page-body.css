@@ -1,5 +1,6 @@
 /* Main Content Layout */
 .waves {
+  background-image: url("../assets/background/wave-1.svg");
   animation: slideAnimation 10s infinite linear;
   background-repeat: no-repeat;
   background-size: cover;
