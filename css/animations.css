@@ -1,0 +1,14 @@
+#animated {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: top 1s ease-in-out;
+}
+
+body.loaded #animatedElement {
+  top: 50%; /* Final position */
+}
