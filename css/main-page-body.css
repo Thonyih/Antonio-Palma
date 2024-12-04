@@ -54,33 +54,56 @@
   border-radius: 8px;
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.7);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
 
+.right-section:hover,
+.left-section:hover {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: scale(1.06);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.6);
+}
+
+.left-div-section {
   /* Animation */
   opacity: 0;
   transform: translateY(-50px);
   animation: fadeInSlide 2s ease forwards; /* Add animation */
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInSlide {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-100px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+  }
+}
+
+.right-div-section {
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInSlide 2s ease forwards; /* Add animation */
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
 
 /* Override for .center-section */
 .center-section {
   box-shadow: none;
-}
-
-.right-section:hover,
-.left-section:hover {
-  transform: scale(1.04);
-  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.6);
 }
 
 /* Center Section (Image) */
@@ -119,7 +142,7 @@
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -132,9 +155,8 @@
     padding: 10px;
   }
 
-  .left-section {
+  .left-div-section {
     text-align: left;
-    padding: 1rem;
     opacity: 0;
     transform: translateX(1000px);
     animation: fadeInSlideRight 2s ease forwards; /* Add animation */
@@ -147,13 +169,12 @@
     }
     100% {
       opacity: 1;
-      transform: translateX(0);
+      transform: none;
     }
   }
 
-  .right-section {
+  .right-div-section {
     text-align: left;
-    padding: 1rem;
     opacity: 0;
     transform: translateX(1000px);
     animation: fadeInSlideLeft 2s ease forwards; /* Add animation */
@@ -166,7 +187,7 @@
     }
     100% {
       opacity: 1;
-      transform: translateX(0);
+      transform: none;
     }
   }
 
