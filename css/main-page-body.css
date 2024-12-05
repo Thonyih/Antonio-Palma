@@ -148,6 +148,37 @@
 
 /* Responsive Design */
 @media (max-width: 1220px) {
+  .waves {
+    background-image: url("../assets/background/wave-small-1.svg");
+    animation: slideAnimation 10s infinite linear;
+  }
+
+  @keyframes slideAnimation {
+    0% {
+      background-image: url("../assets/background/wave-small-1.svg");
+    }
+    16.67% {
+      background-image: url("../assets/background/wave-small-2.svg");
+    }
+    33.33% {
+      background-image: url("../assets/background/wave-small-3.svg");
+    }
+    50% {
+      background-image: url("../assets/background/wave-small-4.svg");
+    }
+    66.67% {
+      background-image: url("../assets/background/wave-small-5.svg");
+    }
+    83.33% {
+      background-image: url("../assets/background/wave-small-6.svg");
+    }
+    100% {
+      background-image: url("../assets/background/wave-small-1.svg");
+    }
+  }
+
+  /*#############################################################*/
+
   .main-content {
     flex-direction: column;
     align-items: center;
