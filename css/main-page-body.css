@@ -63,6 +63,14 @@
   box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.6);
 }
 
+.right-section:active,
+.left-section:active {
+  transform: scale(0.9);
+}
+
+/*ANIMATION ON PAGE LOAD*/
+/*################################################################*/
+
 .left-div-section {
   /* Animation */
   opacity: 0;
@@ -100,6 +108,8 @@
     transform: none;
   }
 }
+
+/*################################################################*/
 
 /* Override for .center-section */
 .center-section {
@@ -252,4 +262,8 @@
 .linkedin-icon:hover {
   transform: scale(1.04);
   box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.6);
+}
+
+.linkedin-icon:active {
+  transform: scale(0.9);
 }

@@ -3,9 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Russo One", sans-serif;
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: 2px;
   max-width: 100%;
+  overscroll-behavior: none;
+}
+
+html {
+  background-color: #102d6c; /* Match your site's background */
+  margin: 0;
+  padding: 0;
 }
 
 /* Header */
