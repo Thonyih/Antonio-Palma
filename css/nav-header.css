@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Russo One", sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   letter-spacing: 2px;
   max-width: 100%;
-  overscroll-behavior: none;
 }
 
 html {
+  height: 100%;
   background-color: #102d6c; /* Match your site's background */
   margin: 0;
   padding: 0;

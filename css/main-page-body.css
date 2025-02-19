@@ -8,7 +8,7 @@
 }
 
 /* Keyframes for Infinite Sliding Animation */
-@keyframes slideAnimation {
+@keyframes slideAnimation2 {
   0% {
     background-image: url("../assets/background/wave-1.svg");
   }
@@ -160,7 +160,7 @@
 @media (max-width: 1220px) {
   .waves {
     background-image: url("../assets/background/wave-small-1.svg");
-    animation: slideAnimation 10s infinite linear;
+    animation: 10s infinite linear;
   }
 
   @keyframes slideAnimation {
