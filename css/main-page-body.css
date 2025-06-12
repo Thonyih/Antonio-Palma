@@ -1,37 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Russo One", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  max-width: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #191d1e; /* Old browsers */
+  background: -moz-linear-gradient(
+    0deg,
+    #191d1e 50%,
+    #283139 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(50%, #191d1e),
+    color-stop(100%, #283139)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    0deg,
+    #191d1e 50%,
+    #283139 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    0deg,
+    #191d1e 50%,
+    #283139 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(0deg, #191d1e 50%, #283139 100%); /* IE10+ */
+  background: linear-gradient(0deg, #191d1e 50%, #283139 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191d1e', endColorstr='#283139',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-attachment: fixed;
+}
+
+html {
+  background-color: #283139;
+}
+
 /* Main Content Layout */
-.waves {
-  background-image: url("../assets/background/wave-1.svg");
-  animation: slideAnimation 10s infinite linear;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-}
-
-/* Keyframes for Infinite Sliding Animation */
-@keyframes slideAnimation2 {
-  0% {
-    background-image: url("../assets/background/wave-1.svg");
-  }
-  16.67% {
-    background-image: url("../assets/background/wave-2.svg");
-  }
-  33.33% {
-    background-image: url("../assets/background/wave-3.svg");
-  }
-  50% {
-    background-image: url("../assets/background/wave-4.svg");
-  }
-  66.67% {
-    background-image: url("../assets/background/wave-5.svg");
-  }
-  83.33% {
-    background-image: url("../assets/background/wave-6.svg");
-  }
-  100% {
-    background-image: url("../assets/background/wave-1.svg");
-  }
-}
-
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -52,7 +68,7 @@
   padding: 20px;
   display: inline-block;
   border-radius: 8px;
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -68,8 +84,9 @@
   transform: scale(0.9);
 }
 
-/*ANIMATION ON PAGE LOAD*/
-/*################################################################*/
+/*----------------------------------------*/
+/*---------ANIMATION ON PAGE LOAD---------*/
+/*----------------------------------------*/
 
 .left-div-section {
   /* Animation */
@@ -109,7 +126,9 @@
   }
 }
 
-/*################################################################*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
 
 /* Override for .center-section */
 .center-section {
@@ -158,37 +177,6 @@
 
 /* Responsive Design */
 @media (max-width: 1220px) {
-  .waves {
-    background-image: url("../assets/background/wave-small-1.svg");
-    animation: 10s infinite linear;
-  }
-
-  @keyframes slideAnimation {
-    0% {
-      background-image: url("../assets/background/wave-small-1.svg");
-    }
-    16.67% {
-      background-image: url("../assets/background/wave-small-2.svg");
-    }
-    33.33% {
-      background-image: url("../assets/background/wave-small-3.svg");
-    }
-    50% {
-      background-image: url("../assets/background/wave-small-4.svg");
-    }
-    66.67% {
-      background-image: url("../assets/background/wave-small-5.svg");
-    }
-    83.33% {
-      background-image: url("../assets/background/wave-small-6.svg");
-    }
-    100% {
-      background-image: url("../assets/background/wave-small-1.svg");
-    }
-  }
-
-  /*#############################################################*/
-
   .main-content {
     flex-direction: column;
     align-items: center;
@@ -254,14 +242,14 @@
 .linkedin-icon {
   width: 100px;
   height: 100px;
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .linkedin-icon:hover {
   transform: scale(1.04);
-  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
 .linkedin-icon:active {
