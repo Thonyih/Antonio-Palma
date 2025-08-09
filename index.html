@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/main-page-body.css" />
     <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/hologram.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -119,54 +120,27 @@
       </nav>
     </header>
 
-    <div class="main-content">
+    <div class="main-content" style="">
       <!--LEFT SECTION-->
       <div class="left-div-section">
         <section
-          class="left-section holographic-card"
-          style="
-            background: linear-gradient(145deg, #0c2f7b, #2d4f87);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-          "
+          class="left-section glass-background"
           onclick="window.location.href='/Antonio-Palma/pages/about.html';"
         >
-          <h2 style="padding-bottom: 10px">
-            <i class="fa-solid fa-user"></i> About Me
-          </h2>
-          <p style="padding-bottom: 10px; text-align: left">- 25 year old</p>
-          <p style="padding-bottom: 10px; text-align: left">
-            - Born in Portugal
-          </p>
-          <p style="padding-bottom: 10px; text-align: left">
-            - Vintage Car & Motorcycle enthusiast
-          </p>
-          <p style="padding-bottom: 10px; text-align: left">- Mountain Biker</p>
-          <p style="padding-bottom: 10px; text-align: left">- Computers</p>
+          <div>
+            <h1 class="headline">
+              <span class="highlight">António Palma</span><br />
+              Software Developer
+            </h1>
+          </div>
+          <img
+            src="assets/images/profile-picture.jpg"
+            alt="Profile Photo"
+            class="profile-image"
+            style="box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6)"
+          />
         </section>
       </div>
-
-      <!--CENTER SECTION-->
-      <section class="center-section">
-        <img
-          src="assets/images/profile-picture.jpg"
-          alt="Profile Photo"
-          class="profile-image"
-          style="box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6)"
-        />
-        <div class="linkedin-icon-div">
-          <a
-            href="https://www.linkedin.com/in/antoniopalma99/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="assets/images/linkedin-icon.jpg"
-              alt="LinkedIn Profile"
-              class="linkedin-icon"
-            />
-          </a>
-        </div>
-      </section>
 
       <!--RIGHT SECTION-->
       <div class="right-div-section">
@@ -178,23 +152,80 @@
           "
           onclick="window.location.href='./pages/experience.html';"
         >
-          <h2 style="padding-bottom: 10px">
-            <i class="fa-solid fa-code"></i> Experience
-          </h2>
-          <p style="padding-bottom: 10px; text-align: left">
-            - Junior Full-Stack Developer
-          </p>
-          <p style="padding-bottom: 10px; text-align: left">
-            - International Project Experience
-          </p>
-          <p style="padding-bottom: 10px; text-align: left">
-            - Graduate in Computer Engineering
-          </p>
-          <p style="padding-bottom: 10px; text-align: left">
-            - Teamwork and interpersonal skills
-          </p>
+          <h2><i class="fa-solid fa-code"></i> Experience</h2>
+        </section>
+      </div>
+
+      <!--RIGHT SECTION-->
+      <div class="right-div-section">
+        <section
+          class="right-section holographic-card"
+          style="
+            background: linear-gradient(145deg, #1a4d48, #3a786d);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          "
+          onclick="window.location.href='./pages/about.html';"
+        >
+          <h2><i class="fa-solid fa-code"></i> About</h2>
         </section>
       </div>
     </div>
+
+    <div>Testing information</div>
+    <div>Testing information</div>
+
+    <footer class="main-footer">
+      <div
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <span>© <span id="year"></span> António Palma</span>
+
+        <div>
+          <a
+            href="mailto:you@example.com"
+            aria-label="Email"
+            style="
+              margin-right: 0.75rem;
+              color: #fff;
+              font-size: 1.5rem;
+              text-decoration: none;
+            "
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/antoniopalma99/"
+            aria-label="LinkedIn"
+            style="
+              margin-right: 0.75rem;
+              color: #fff;
+              font-size: 1.5rem;
+              text-decoration: none;
+            "
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/Thonyih"
+            aria-label="GitHub"
+            style="color: #fff; font-size: 1.5rem; text-decoration: none"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
   </body>
 </html>

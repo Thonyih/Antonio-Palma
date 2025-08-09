@@ -1,6 +1,6 @@
 class Carousel {
-  constructor() {
-    this.container = document.querySelector(".mvp-carousel");
+  constructor(container) {
+    this.container = container;
     this.carousel = this.container.querySelector(".mvp-carousel-wrapper");
     this.cards = Array.from(this.carousel.querySelectorAll(".mvp-card"));
     this.prevBtn = this.container.querySelector(".mvp-carousel__prevBtn");
@@ -72,35 +72,59 @@ class Carousel {
   }
 }
 
-const carousel = new Carousel();
+//initializes ALL carousel instances
+const carousels = [];
 
-let startX = 0;
-let currentX = 0;
-let isDragging = false;
+document.querySelectorAll(".mvp-carousel").forEach((carouselEl) => {
+  const carouselInstance = new Carousel(carouselEl);
+  console.log(carouselInstance);
+  carousels.push(carouselInstance);
+});
 
 const carouselWrapper = document.querySelector(".mvp-carousel-wrapper");
 
-carouselWrapper.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-  isDragging = true;
-});
+carousels.forEach((carouselInstance) => {
+  const wrapper = carouselInstance.carousel;
 
-carouselWrapper.addEventListener("touchmove", (e) => {
-  if (!isDragging) return;
-  currentX = e.touches[0].clientX;
-});
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
 
-carouselWrapper.addEventListener("touchend", () => {
-  const diff = currentX - startX;
-  if (Math.abs(diff) > 50) {
-    // threshold
-    if (diff < 0 && carousel.activeIndex < carousel.cards.length - 3) {
-      // Swipe left: go to next card if not at end
-      carousel.next();
-    } else if (diff > 0 && carousel.activeIndex > -2) {
-      // Swipe right: go to previous card if not at start
-      carousel.prev();
+  wrapper.addEventListener("touchstart", (e) => {
+    if (e.touches.length !== 1) return;
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  wrapper.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX;
+  });
+
+  wrapper.addEventListener("touchend", () => {
+    if (!isDragging) return;
+
+    const diff = currentX - startX;
+
+    if (Math.abs(diff) > 50) {
+      if (
+        diff < 0 &&
+        carouselInstance.activeIndex < carouselInstance.cards.length - 3
+      ) {
+        carouselInstance.next();
+      } else if (diff > 0 && carouselInstance.activeIndex > -2) {
+        carouselInstance.prev();
+      }
     }
-  }
-  isDragging = false;
+
+    isDragging = false;
+    startX = 0;
+    currentX = 0;
+  });
+
+  wrapper.addEventListener("touchcancel", () => {
+    isDragging = false;
+    startX = 0;
+    currentX = 0;
+  });
 });
