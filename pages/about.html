@@ -7,14 +7,20 @@
 
     <link rel="stylesheet" href="/Antonio-Palma/css/nav-header.css" />
     <link rel="stylesheet" href="/Antonio-Palma/css/main-page-body.css" />
+    <link rel="stylesheet" href="/Antonio-Palma/css/background.css" />
+    <link rel="stylesheet" href="/Antonio-Palma/css/hologram.css" />
+    <link rel="stylesheet" href="/Antonio-Palma/css/footer.css" />
+
     <link
       rel="stylesheet"
       href="/Antonio-Palma/css/about-page/base-style.css"
     />
+
     <link
       rel="stylesheet"
       href="/Antonio-Palma/css/about-page/carousel-photos.css"
     />
+
     <link
       rel="stylesheet"
       href="/Antonio-Palma/css/about-page/carousel-photos2.css"
@@ -33,25 +39,35 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicon/apple-touch-icon.png"
+      href="/Antonio-Palma/assets/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon/favicon-32x32.png"
+      href="/Antonio-Palma/assets/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
+      href="/Antonio-Palma/assets/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="/Antonio-Palma/assets/favicon/site.webmanifest"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/stacked-cards@latest/dist/stacked-cards.min.js"></script>
   </head>
-  <body class="waves">
+  <body>
+    <canvas id="projector"
+      >Your browser does not support the Canvas element.</canvas
+    >
+    <script src="https://code.createjs.com/easeljs-0.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="/Antonio-Palma/js/background.js"></script>
+
     <header class="main-header">
       <nav class="navbar">
         <ul class="nav-name nav-detail">
@@ -72,7 +88,10 @@
 
         <ul class="nav-detail">
           <li>
-            <a style="text-decoration: none" href="">
+            <a
+              style="text-decoration: none"
+              href="/Antonio-Palma/pages/resume.html"
+            >
               <h1
                 style="
                   color: white;
@@ -87,7 +106,10 @@
             <h1 style="color: #0086ff">|</h1>
           </li>
           <li>
-            <a style="text-decoration: none" href="">
+            <a
+              style="text-decoration: none"
+              href="/Antonio-Palma/pages/projects.html"
+            >
               <h1
                 style="
                   color: white;
@@ -102,14 +124,17 @@
             <h1 style="color: #0086ff">|</h1>
           </li>
           <li>
-            <a style="text-decoration: none" href="">
+            <a
+              style="text-decoration: none"
+              href="/Antonio-Palma/pages/contacts.html"
+            >
               <h1
                 style="
                   color: white;
                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
                 "
               >
-                Contact
+                Contacts
               </h1>
             </a>
           </li>
@@ -370,6 +395,60 @@
         <button class="mvp-carousel__nextBtn">←</button>
       </div>
     </div>
+
+    <footer class="main-footer">
+      <div
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <span>© <span id="year"></span> António Palma</span>
+
+        <div>
+          <a
+            href="mailto:you@example.com"
+            aria-label="Email"
+            style="
+              margin-right: 0.75rem;
+              color: #fff;
+              font-size: 1.5rem;
+              text-decoration: none;
+            "
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/antoniopalma99/"
+            aria-label="LinkedIn"
+            style="
+              margin-right: 0.75rem;
+              color: #fff;
+              font-size: 1.5rem;
+              text-decoration: none;
+            "
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/Thonyih"
+            aria-label="GitHub"
+            style="color: #fff; font-size: 1.5rem; text-decoration: none"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
   </body>
   <script src="/Antonio-Palma/js/carousel-photos.js"></script>
 </html>
