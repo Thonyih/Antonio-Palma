@@ -17,6 +17,10 @@
   list-style-type: none;
 }
 
+.nav-separator {
+  color: #3a786d;
+}
+
 .nav-detail {
   display: flex;
   justify-content: right;
@@ -36,7 +40,7 @@
 }
 
 .nav-detail a:hover {
-  color: #0086ff; /* Change to a highlight color of your choice */
+  color: #3a786d; /* Change to a highlight color of your choice */
   transition: color 0.3s ease;
 }
 
@@ -47,7 +51,7 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #0086ff; /* Match the hover color */
+  background-color: #3a786d; /* Match the hover color */
   transition: width 0.3s ease;
 }
 
