@@ -4,5 +4,4 @@
   color: white;
   padding: 1rem;
   z-index: 10;
-  padding-bottom: max(16px, env(safe-area-inset-bottom));
 }

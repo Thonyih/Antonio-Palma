@@ -6,10 +6,10 @@
   gap: 0.5em;
   flex-wrap: wrap;
   margin: 10px;
-  border: 2px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.273);
   border-radius: 10px;
   margin: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 
   opacity: 0;
   animation: fadeInSlide 2s ease forwards; /* Add animation */
@@ -28,7 +28,7 @@
 }
 
 .item-text {
-  background: linear-gradient(145deg, #102d6c, #254a87);
+  background: linear-gradient(145deg, #1a4d48, #3a786d);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 15px;

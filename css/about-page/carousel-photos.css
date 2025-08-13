@@ -78,7 +78,6 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 
-  background-color: #fff;
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
   box-sizing: border-box;
@@ -99,7 +98,7 @@
 
 .mvp-carousel__prevBtn:hover,
 .mvp-carousel__nextBtn:hover {
-  background-color: #254a87;
+  background-color: #3a786d99;
   color: #fff;
 }
 
