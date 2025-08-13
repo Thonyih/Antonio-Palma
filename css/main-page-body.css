@@ -228,7 +228,7 @@ html {
 /* Responsive Design */
 @media (max-width: 1220px) {
   .main-content {
-    padding: 5rem;
+    padding: 0rem;
   }
 
   .second-content {
