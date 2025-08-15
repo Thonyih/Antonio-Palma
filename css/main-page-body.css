@@ -83,6 +83,9 @@ html {
 .content {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 
 /* Main Content Layout */
@@ -93,8 +96,7 @@ html {
   align-items: center;
   padding: 2rem;
   gap: 2%;
-  font-size: 20px;
-  flex: 1;
+  font-size: 12px;
 }
 
 .second-content {
@@ -104,8 +106,6 @@ html {
   font-size: 20px;
   padding-left: 0;
   margin-left: 0;
-
-  flex: 0;
 }
 
 /* Left, Center, and Right Sections */
@@ -124,17 +124,18 @@ html {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* .right-section:hover,
-.left-section:hover {
+.main-content-buttons {
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  transform: scale(1.06);
-  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.6);
 }
-
-.right-section:active,
-.left-section:active {
-  transform: scale(0.9);
-} */
 
 /*----------------------------------------*/
 /*---------ANIMATION ON PAGE LOAD---------*/
@@ -160,6 +161,8 @@ html {
 }
 
 .right-div-section {
+  display: flex;
+  flex-direction: column;
   /* Animation */
   opacity: 0;
   transform: translateY(-50px);
