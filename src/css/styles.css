@@ -14,7 +14,6 @@ header {
 body {
   background-color: rgb(100, 151, 148);
   margin: 0;
-  line-height: 1.5;
   min-height: 100vh;
   min-height: 100dvh;
   font-family:
@@ -48,8 +47,72 @@ main {
 }
 
 .section {
+  display: flex;
+  flex-wrap: wrap;
+
   margin-bottom: 20px;
   background-color: lightgray;
   padding: 10px;
-  height: 50vh;
+}
+
+.box-title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  flex-direction: column;
+  background-color: rgb(49, 165, 43);
+  width: 100%;
+  height: 40%;
+  padding-left: 50px;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: 500;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+}
+
+.title-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.subtitle {
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+}
+
+.box-text {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: rgb(137, 160, 182);
+  width: 100%;
+
+  height: 55%;
+
+  display: flex;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  margin: 0;
+}
+
+.bullets li {
+  line-height: 2.5;
+}
+
+.bullets li::marker {
+  font-size: 1em;
 }
