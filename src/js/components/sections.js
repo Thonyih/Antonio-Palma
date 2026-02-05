@@ -1,7 +1,7 @@
 `use strict`;
 
 export class AboutSection {
-  constructor(rootSelector = "#about") {
+  constructor(rootSelector) {
     this.root = document.querySelector(rootSelector);
     if (!this.root) throw new Error(`Missing ${rootSelector}`);
   }
@@ -11,6 +11,6 @@ export class AboutSection {
   }
 
   onClick() {
-    console.log("About section clicked!");
+    console.log(this.root.id + " section clicked!");
   }
 }
