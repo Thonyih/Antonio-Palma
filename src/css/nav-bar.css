@@ -3,7 +3,6 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  background-color: #2563eb;
 }
 
 .icon-menu {
@@ -14,7 +13,6 @@
   padding: 10px 12px;
   margin: 0;
   width: 80%;
-  background-color: tomato;
 }
 
 .icon-item {
@@ -23,7 +21,7 @@
   border-radius: 999px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(0, 0, 0, 0.2);
   transition:
     width 220ms ease,
     transform 160ms ease,
@@ -51,7 +49,7 @@
 
 .icon {
   font-size: 18px;
-  line-height: 1;
+  line-height: 2;
   flex: 0 0 auto;
 }
 

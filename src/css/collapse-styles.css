@@ -3,11 +3,15 @@
   gap: 10px;
   padding: 10px 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.7);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+
+  background: rgba(250, 250, 250, 0.7);
+  width: 92%;
 }
 
 .resume-meta {
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
