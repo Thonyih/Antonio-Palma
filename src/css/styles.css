@@ -140,6 +140,8 @@ main {
   background-color: white;
 
   cursor: pointer;
+
+  scroll-margin-top: 100px;
 }
 
 .open-menu-text {
