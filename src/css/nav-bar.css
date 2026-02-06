@@ -1,0 +1,95 @@
+/* Header expanding icon nav */
+.icon-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #2563eb;
+}
+
+.icon-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+  padding: 10px 12px;
+  margin: 0;
+  width: 80%;
+  background-color: tomato;
+}
+
+.icon-item {
+  width: 56px;
+  height: 48px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  transition:
+    width 220ms ease,
+    transform 160ms ease,
+    background-color 160ms ease;
+}
+
+.icon-link .icon-img {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  display: block;
+}
+
+.icon-link {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  text-decoration: none;
+  color: #111;
+}
+
+.icon {
+  font-size: 18px;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.label {
+  font:
+    15px/1.2 system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.icon-item:hover {
+  width: 150px;
+  background: color-mix(in srgb, var(--accent, #2563eb) 12%, white);
+  transform: translateY(-1px);
+}
+
+.icon-item:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.icon-item:hover .icon {
+  filter: saturate(1.1);
+}
+
+/* Small screens: allow wrapping */
+@media (max-width: 420px) {
+  .icon-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

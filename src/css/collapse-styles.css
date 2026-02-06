@@ -1,0 +1,65 @@
+.resume-entry {
+  display: grid;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.resume-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font:
+    600 13px/1.2 system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  opacity: 0.85;
+}
+
+.resume-meta .sep {
+  opacity: 0.45;
+}
+
+.resume-bullets {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.resume-bullets li {
+  font:
+    14px/1.45 system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  opacity: 0.92;
+}
+
+.resume-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resume-tag {
+  font:
+    12px/1 system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.03);
+}

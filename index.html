@@ -5,21 +5,66 @@
     <link rel="icon" type="image/png" href="imgs/user-icon.png" />
 
     <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="/src/css/nav-bar.css" />
+    <link rel="stylesheet" href="/src/css/collapse-styles.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>António Palma</title>
   </head>
   <body>
     <header>
-      <nav class="main-nav">
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#work">Work Experience</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-link" href="#academic">Academic</a>
+      <nav class="icon-nav" aria-label="Primary">
+        <ul class="icon-menu">
+          <li class="icon-item" style="--accent: #7c3aed">
+            <a class="icon-link" href="#about">
+              <img
+                class="icon-img"
+                src="imgs/user-icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="label">About</span>
+            </a>
+          </li>
+          <li class="icon-item" style="--accent: #2563eb">
+            <a class="icon-link" href="#work">
+              <img
+                class="icon-img"
+                src="imgs/suitcase-icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="label">Work</span>
+            </a>
+          </li>
+          <li class="icon-item" style="--accent: #059669">
+            <a class="icon-link" href="#academic">
+              <img
+                class="icon-img"
+                src="imgs/academic-icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="label">Academic</span>
+            </a>
+          </li>
+          <li class="icon-item" style="--accent: #ea580c">
+            <a class="icon-link" href="#projects">
+              <img
+                class="icon-img"
+                src="imgs/project-icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="label">Projects</span>
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main>
+      <!-- ABOUT SECTION -->
       <section class="section" id="about">
         <div class="box-title">
           <div class="title-row">
@@ -43,6 +88,7 @@
         </div>
       </section>
 
+      <!-- WORK SECTION -->
       <section class="section" id="work">
         <div class="box-title">
           <div class="title-row">
@@ -51,7 +97,6 @@
           </div>
           <h3 class="subtitle">This is the subtitle</h3>
         </div>
-        <!-- This section will have opening and closing tabs -->
         <div class="box-text">
           <div class="open-menu">
             <!-- This section closes and opens -->
@@ -60,17 +105,36 @@
               <h3 class="open-menu-title">Junior Developer PDMFC</h3>
             </div>
             <div class="open-menu-text" id="PDMFC-text">
-              <ul>
-                <li>Driven IT professional with a great pride in my work.</li>
-                <li>
-                  Fostering a growth mindset and aligning myself with project /
-                  team goals
-                </li>
-                <li>
-                  Known for being responsible, proactive and autonomous with
-                  strong multitasking and organization skills.
-                </li>
-              </ul>
+              <div class="resume-entry">
+                <div class="resume-meta">
+                  <span class="resume-role">Junior Developer</span>
+                  <span class="sep">•</span>
+                  <span class="resume-org">PDMFC</span>
+                  <span class="sep">•</span>
+                  <span class="resume-date">2023 – 2024</span>
+                  <span class="sep">•</span>
+                  <span class="resume-loc">Lisbon</span>
+                </div>
+
+                <ul class="resume-bullets">
+                  <li>
+                    Built and maintained internal tools used by multiple
+                    stakeholders.
+                  </li>
+                  <li>
+                    Reduced manual steps by improving workflow and automations.
+                  </li>
+                  <li>
+                    Collaborated with the team to deliver features on schedule.
+                  </li>
+                </ul>
+
+                <div class="resume-tags">
+                  <span class="resume-tag">JavaScript</span>
+                  <span class="resume-tag">HTML/CSS</span>
+                  <span class="resume-tag">APIs</span>
+                </div>
+              </div>
             </div>
 
             <!-- This section closes and opens -->
@@ -156,6 +220,7 @@
         </div>
       </section>
 
+      <!-- ACADEMIC SECTION -->
       <section class="section" id="academic">
         <div class="box-title">
           <div class="title-row">
@@ -170,12 +235,33 @@
           <div class="open-menu">
             <!-- This section closes and opens -->
             <div class="open-menu-row" data-target="IST-text" id="IST">
-              <img class="menu-icon" src="imgs/ist-icon.png" />
-              <h3 class="open-menu-title">
-                Mestrado - Engenharia Informática e de Computadores
-              </h3>
+              <img class="menu-icon-academic" src="imgs/ist-icon.png" />
+              <h4 class="open-menu-title-academic">
+                Masters - Computer Science and Engineering
+              </h4>
             </div>
             <div class="open-menu-text" id="IST-text">
+              <ul>
+                <li>Driven IT professional with a great pride in my work.</li>
+                <li>
+                  Fostering a growth mindset and aligning myself with project /
+                  team goals
+                </li>
+                <li>
+                  Known for being responsible, proactive and autonomous with
+                  strong multitasking and organization skills.
+                </li>
+              </ul>
+            </div>
+
+            <!-- This section closes and opens -->
+            <div class="open-menu-row" data-target="UAL-text" id="UAL">
+              <img class="menu-icon-academic" src="imgs/ual-icon.png" />
+              <h4 class="open-menu-title-academic">
+                Bachelors - Computer Science and Engineering
+              </h4>
+            </div>
+            <div class="open-menu-text" id="UAL-text">
               <ul>
                 <li>Driven IT professional with a great pride in my work.</li>
                 <li>
@@ -191,7 +277,103 @@
           </div>
         </div>
       </section>
-      <section class="section" id="contact"><div class="box-1"></div></section>
+
+      <!-- PROJECTS SECTION -->
+      <section class="section" id="projects">
+        <div class="box-title">
+          <div class="title-row">
+            <img class="title-icon" src="imgs/project-icon.png" />
+            <h1 class="title">Projects</h1>
+          </div>
+          <h3 class="subtitle">This is the subtitle</h3>
+        </div>
+
+        <!-- This section will have opening and closing tabs -->
+        <div class="box-text">
+          <div class="open-menu">
+            <!-- This section closes and opens -->
+            <div class="open-menu-row" data-target="ROBUST-text" id="ROBUST">
+              <img class="menu-icon" src="imgs/plus-icon.png" />
+              <h3 class="open-menu-title">ROBUST</h3>
+            </div>
+            <div class="open-menu-text" id="ROBUST-text">
+              <ul>
+                <li>Driven IT professional with a great pride in my work.</li>
+                <li>
+                  Fostering a growth mindset and aligning myself with project /
+                  team goals
+                </li>
+                <li>
+                  Known for being responsible, proactive and autonomous with
+                  strong multitasking and organization skills.
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="open-menu-row"
+              data-target="HURRICANE-text"
+              id="HURRICANE"
+            >
+              <img class="menu-icon" src="imgs/plus-icon.png" />
+              <h3 class="open-menu-title">HURRICANE</h3>
+            </div>
+            <div class="open-menu-text" id="HURRICANE-text">
+              <ul>
+                <li>Driven IT professional with a great pride in my work.</li>
+                <li>
+                  Fostering a growth mindset and aligning myself with project /
+                  team goals
+                </li>
+                <li>
+                  Known for being responsible, proactive and autonomous with
+                  strong multitasking and organization skills.
+                </li>
+              </ul>
+            </div>
+
+            <div class="open-menu-row" data-target="ARIR-text" id="ARIR">
+              <img class="menu-icon" src="imgs/plus-icon.png" />
+              <h3 class="open-menu-title">
+                Legacy API Reuse for Incident Reduction
+              </h3>
+            </div>
+            <div class="open-menu-text" id="ARIR-text">
+              <ul>
+                <li>Driven IT professional with a great pride in my work.</li>
+                <li>
+                  Fostering a growth mindset and aligning myself with project /
+                  team goals
+                </li>
+                <li>
+                  Known for being responsible, proactive and autonomous with
+                  strong multitasking and organization skills.
+                </li>
+              </ul>
+            </div>
+
+            <div class="open-menu-row" data-target="CCPO-text" id="CCPO">
+              <img class="menu-icon" src="imgs/plus-icon.png" />
+              <h3 class="open-menu-title">
+                Control Center Process Optimization
+              </h3>
+            </div>
+            <div class="open-menu-text" id="CCPO-text">
+              <ul>
+                <li>Driven IT professional with a great pride in my work.</li>
+                <li>
+                  Fostering a growth mindset and aligning myself with project /
+                  team goals
+                </li>
+                <li>
+                  Known for being responsible, proactive and autonomous with
+                  strong multitasking and organization skills.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
