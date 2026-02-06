@@ -9,9 +9,13 @@ header {
   color: white;
   padding: 20px 0;
   text-align: center;
+  width: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgb(100, 151, 148);
   margin: 0;
   min-height: 100vh;
@@ -26,11 +30,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.hidden {
+  display: none;
+}
+
 .main-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 
   background-color: #9b9b9b;
+}
+
+@media (max-width: 360px) {
+  .main-nav {
+    flex-direction: column;
+  }
 }
 
 .nav-link {
@@ -39,11 +53,22 @@ body {
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  font-size: small;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: coral;
   padding: 10px;
+  max-width: 75%;
+}
+
+@media (max-width: 801px) {
+  main {
+    max-width: 100%;
+  }
 }
 
 .section {
@@ -120,6 +145,7 @@ main {
 /* Open Menu style section */
 .open-menu {
   display: flex;
+  width: 100%;
 
   justify-content: flex-start;
   flex-direction: column;
@@ -139,10 +165,21 @@ main {
 .open-menu-text {
   color: rgb(0, 0, 0);
   background-color: #af4ca2;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 300ms ease,
+    opacity 200ms ease;
+}
+
+.open-menu-text.is-open {
+  max-height: 400px; /* set high enough for content */
+  opacity: 1;
 }
 
 .menu-icon {
-  width: 20px;
   height: 20px;
   margin-right: 20px;
   margin-left: 20px;
