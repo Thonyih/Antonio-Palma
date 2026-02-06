@@ -1,7 +1,12 @@
 `use sctrict`;
 
-import { AboutSection } from "./components/sections.js";
+import { SectionExpand } from "./components/sections.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  new AboutSection("#PDMFC").init();
+  document.querySelectorAll(".open-menu-row").forEach((row) => {
+    const targetId = row.dataset.target;
+    const sectionExpand = new SectionExpand(`#${row.id}`, targetId);
+
+    sectionExpand.init();
+  });
 });
