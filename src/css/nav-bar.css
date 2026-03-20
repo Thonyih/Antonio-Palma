@@ -12,7 +12,7 @@
   gap: 12px;
   padding: 10px 12px;
   margin: 0;
-  width: 80%;
+  width: 40%;
 }
 
 .icon-item {
@@ -89,5 +89,6 @@
   .icon-menu {
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
   }
 }
