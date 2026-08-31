@@ -12,7 +12,8 @@
   gap: 12px;
   padding: 10px 12px;
   margin: 0;
-  width: 40%;
+  width: 50%;
+  background-color: red;
 }
 
 .icon-item {
@@ -85,10 +86,25 @@
 }
 
 /* Small screens: allow wrapping */
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .icon-menu {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+  }
+
+  .icon-item {
+    transition: none;
+  }
+
+  .icon-item:hover {
+    width: 56px;
+    background: #fff;
+    transform: none;
+  }
+
+  .icon-item:hover .label {
+    opacity: 0;
+    transform: translateX(-6px);
   }
 }
